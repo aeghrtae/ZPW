@@ -1,0 +1,8 @@
+repo to folder
+github to cos co pozwala nam miec latwy dostep do swoich plikow i trzymac je w jednym miejscu 
+git narzedzie ktore sledzi zmiany na repo i wrzuca na githuba
+commit zapisanie zmian
+branch drzewo / galaz
+checkout wejscie w branch
+merge nie usuwajac wczesniejszego brancha commitujemy do innego
+rebase przesuwajac poprzedniego brancha commitujemy do innego 
