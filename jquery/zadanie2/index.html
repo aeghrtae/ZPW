@@ -42,13 +42,23 @@
     
 
     $(function(){
-        $(".container").css("letter-spacing","5px");
-        $('[href="#"]').attr("href","https://www.bing.com/ck/a?!&&p=8d9a000547bd0f16d096a898b6b4975b035c4982e269aebcde5c3dc88927a425JmltdHM9MTc4ODkxMjAwMA&ptn=3&ver=2&hsh=4&fclid=1d06eca5-9b15-6fd4-3eff-fb6a9ad36ea5&psq=gry+wideo+wikipedia&u=a1aHR0cHM6Ly9wbC53aWtpcGVkaWEub3JnL3dpa2kvR3JhX2tvbXB1dGVyb3dh");
-        $("#minecraft").attr("style","font-weight:bold");
-         $("li").eq(3).css("background-color","lightgrey");
-          $("li").not("#pierwszy").css("background-color","lightblue");
-          $("li").odd().css("background-color","black")
-          $("li").odd().css("color","white")
+        console.log($("li").eq(0).text())
+        console.log($("ul").html())
+
+        let a = 5;
+        let $ul = $("ul").html();
+        $("ul").append("<li>"+" Blood of Danwalker"+"</li>");
+
+
+       let $elem = $("li").last().text();
+        $("li").last().remove();
+        $("ul").prepend("<li>"+$elem+"</li>");
+        
+
+        let $h1 = $("h1").text()
+        $("ul").after("<p>"+$h1+"</p>")
+
+
    })
 </script>
 </head>
@@ -57,13 +67,13 @@
  <div class="container">
         <ul>
            
-         <a href="#"><li id="pierwszy">The Witcher 3: Wild Hunt</li></a>
+         <a href="#"><li>The Witcher 3: Wild Hunt</li></a>
          <a href="#"><li>Cyberpunk 2077</li></a>
          <a href="#"><li>Elden Ring</li></a>
          <a href="#"><li>Baldur's Gate 3</li></a>
          <a href="#"><li>Starfield</li></a>
          <a href="#"><li>Hollow Knight</li></a>
-         <a href="#"><li id="minecraft">Minecraft</li></a>
+         <a href="#"><li>Minecraft</li></a>
          <a href="#"><li>Portal 2</li></a>
          <a href="#"><li>The Legend of Zelda: Breath of the Wild</li></a>
          <a href="#"><li>Dark Souls III</li></a>
