@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        li:hover {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+<script>
+    
+
+    $(function(){
+        console.log($("li").eq(0).text())
+        console.log($("ul").html())
+
+        let a = 5;
+        let $ul = $("ul").html();
+        $("ul").append("<li>"+" Blood of Danwalker"+"</li>");
+
+
+       let $elem = $("li").last().text();
+        $("li").last().remove();
+        $("ul").prepend("<li>"+$elem+"</li>");
+        
+
+        let $h1 = $("h1").text()
+        $("ul").after("<p>"+$h1+"</p>")
+
+
+   })
+</script>
+</head>
+<body>
+    <h1>Lista Gier Komputerowych</h1>
+ <div class="container">
+        <ul>
+           
+         <a href="#"><li>The Witcher 3: Wild Hunt</li></a>
+         <a href="#"><li>Cyberpunk 2077</li></a>
+         <a href="#"><li>Elden Ring</li></a>
+         <a href="#"><li>Baldur's Gate 3</li></a>
+         <a href="#"><li>Starfield</li></a>
+         <a href="#"><li>Hollow Knight</li></a>
+         <a href="#"><li>Minecraft</li></a>
+         <a href="#"><li>Portal 2</li></a>
+         <a href="#"><li>The Legend of Zelda: Breath of the Wild</li></a>
+         <a href="#"><li>Dark Souls III</li></a>
+        <a href="#"> <li>Valorant</li></a>
+         <a href="#"><li>Counter-Strike 2</li></a>
+    </ul>
+ </div>
+
+</body>
+</html>
