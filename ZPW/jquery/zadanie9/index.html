@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+
+    <script>
+        $(function(){
+            let start = 0;
+            //object Event
+
+
+            // $(document).on("keydown keyup keypress", function(){
+            //     $("#eventType").text(event.type);
+            // })
+
+            //  $(document).on("mousemove", function(){
+            //     $("#pageX").text(event.pageX);
+            //     $("#pageY").text(event.pageY);
+            // })
+            let  positionX = 0;
+            let  positionY = 0;
+            $(document).on("keydown", function(){
+               
+                 if(event.key === "a"){
+                  
+                  positionX = positionX - 10;
+
+                   $("#kwadrat").css("margin-left", positionX + "px");
+                 } 
+                 
+                  if(event.key === "d"){
+                  
+                  positionX = positionX + 10;
+
+                   $("#kwadrat").css("margin-left", positionX + "px");
+                 } 
+
+
+                  if(event.key === "w"){
+                  
+                  positionX = positionX - 10;
+
+                   $("#kwadrat").css("margin-top", positionX + "px");
+                 } 
+                 
+                  if(event.key === "s"){
+                  
+                  positionX = positionX + 10;
+
+                   $("#kwadrat").css("margin-top", positionX + "px");
+                 } 
+                 
+             })
+            
+             $("#jablko").css({
+                    "margin-left": Math.floor((Math.random() * 500) + 1 ) + "px",
+                     "margin-top": Math.floor((Math.random() * 500) + 1 ) + "px"
+             })
+
+           
+          })
+
+
+    </script>
+
+    
+
+</head>
+<body>
+    <!-- <p>
+     Typ zdarzenia:
+     <span id="eventType">---</span>
+    </p>
+<p>
+   Pozycja myszy:
+   X = 
+    <span id="pageX">---</span>
+    Y =
+    <span id="pageY">---</span>
+</p> -->
+
+<div id="kwadrat" style="width: 200px; height: 200px; background-color: red;  position: absolute;">.</div>
+<div id="jablko" style="width: 20px; height: 20px; background-color: green; " >.</div>
+
+</body>
+</html>

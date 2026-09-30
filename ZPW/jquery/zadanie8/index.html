@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+
+    <script>
+        $(function(){
+            $("#zmien").on("click",function(){
+                $("#tekst").text("Nowy text")
+            })
+        
+                 $("#przelacz").on("click", function(){
+                    $("#pudelko").toggle();
+                 })
+
+
+                 $(".akapit").on("click", function(){
+                        $(this).toggleClass("podswietlony")
+
+                 })
+
+                 
+
+                  $("#przywitaj").on("click",function(){
+                    let $imie = $("#imie").val();
+                    if($imie == ""){
+                        $("#wynik").text("Podaj imie")
+                    } else {
+                        $("#wynik").text("Cześć," + $imie + "!")
+                    }
+                
+            })
+          })
+
+
+    </script>
+
+        <style>
+                .podswietlony{
+                    background-color: yellow;
+                }
+    </style>
+
+</head>
+<body>
+    
+<p id="tekst">Stary Tekst</p>
+<button id="zmien">Zmień</button>
+<div id="pudelko">Widzisz mnie</div>
+<button id="przelacz">pokaz/ukryj</button>
+<p class="akapit">Kliknij mnie</p>
+
+
+<input type="text" name="" id="imie">
+<button id="przywitaj">Przywitaj</button>
+<p id="wynik"></p>
+
+
+
+</body>
+</html>
