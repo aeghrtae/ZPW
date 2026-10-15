@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+
+  
+    </style>
+        
+    <script>
+
+       $(function(){
+
+         $("#formularz").submit(function(e){
+            e.preventDefault();
+            if($("#nick").val() === ""){
+                $("#info").text("Podaj nick")
+            } else{
+                $("#info").text("Przesłano nick: " + $("#nick").val())
+            }
+
+            let haslo = $("#haslo").val();
+             $("#valid").css("color","black");
+            if(haslo.length < 6){
+                $("#valid").text("Haslo jest za krotkie!")
+                $("#valid").css("color","red");
+            } else {
+                 $("#valid").text("Zalogowano")
+                  $("#valid").css("color","green");
+            }
+         })
+
+
+
+
+       })
+       
+
+
+
+    </script>
+
+    
+
+</head>
+<body>
+   <form action="" id="formularz">
+    <input type="text" name="nick" id="nick" placeholder="nick....">
+    <input type="text" name="haslo" id="haslo" placeholder="haslo....">
+    <button type="submit">Wyślij</button>
+   </form>
+    <p id="info"></p>
+    <hr>
+    <p id="valid"></p>
+  
+    
+    
+  
+
+</body>
+</html>
